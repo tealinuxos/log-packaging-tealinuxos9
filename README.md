@@ -65,6 +65,7 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 
 - hati-hati dalam remove aplikasi-aplikasinya
 
+------------------------------------------------------------
 ## Memulai install aplikasi default tealinuxos 9
 
 - install aplikasi default yang sudah ditetapkan dan dirundingkan oleh 
@@ -91,3 +92,5 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 -> git
 -> gedit
 ```
+--------------------------------------------------
+## Memulai install aplikasi dari nambah repo
