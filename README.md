@@ -1,4 +1,4 @@
-Log packaging tealinuxos 9 i386
+Log packaging tealinuxos 9 
 ===============================
 -------------------------------------------
 ## Panduan unpack iso pertama kali ##
