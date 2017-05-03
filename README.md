@@ -19,7 +19,31 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 
 - dengan perintah `dpkg -l | grep namaaplikasi` 
 
-- kemudian catat semua aplikasi yang ada satu persatu
+- misalkan begini `dpkg -l | grep libreoffice` maka hasilnya yang ada dibawah
+
+```shell
+
+ii  libreoffice-base-core                 1:5.1.2-0ubuntu1                                    amd64        office productivity suite -- shared library
+ii  libreoffice-calc                      1:5.1.2-0ubuntu1                                    amd64        office productivity suite -- spreadsheet
+ii  libreoffice-common                    1:5.1.2-0ubuntu1                                    all          office productivity suite -- arch-independent files
+ii  libreoffice-core                      1:5.1.2-0ubuntu1                                    amd64        office productivity suite -- arch-dependent files
+ii  libreoffice-gtk                       1:5.1.2-0ubuntu1                                    amd64        office productivity suite -- GTK+ integration
+ii  libreoffice-math                      1:5.1.2-0ubuntu1                                    amd64        office productivity suite -- equation editor
+ii  libreoffice-style-elementary          1:5.1.2-0ubuntu1                                    all          office productivity suite -- Elementary symbol style
+ii  libreoffice-style-galaxy              1:5.1.2-0ubuntu1                                    all          office productivity suite -- Galaxy (Default) symbol style
+ii  libreoffice-writer                    1:5.1.2-0ubuntu1                                    amd64        office productivity suite -- word processor
+```
+
+- kemudian catat semua aplikasi yang ada satu persatu dengan hanya mengambil nama aplikasi
+
+- misalnya begini
+
+```shell
+-> libreoffice-base-core
+-> libreoffice-calc
+-> libreoffice-common
+.....[teruskan sendiri]
+```
 
 - saat sudah maka mulai dengan menghapus aplikasi-aplikasi tadi dengan perintah
 
