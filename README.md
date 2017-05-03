@@ -1,7 +1,7 @@
 Log packaging tealinuxos 9 i386
 ===============================
-
-## Panduan unpack iso pertama kali
+-------------------------------------------
+## Panduan unpack iso pertama kali ##
 
 ```shell
 $ sudo uck-remaster-unpack-iso namafile.iso
@@ -13,7 +13,7 @@ $ sudo uck-remaster-chroot-rootfs
 Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-rootfs`
 
 ------------------------------------
-## Memulai menghapus
+## Memulai menghapus ##
 
 - pertama lihat daftar aplikasi yang terdaftar dengan nama aplikasi namaaplikasi
 
@@ -63,10 +63,10 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 -> xfce4-taskmanager
 ```
 
-- hati-hati dalam remove aplikasi-aplikasinya
+#### Hati-hati dalam menghapus aplikasi ####
 
 ------------------------------------------------------------
-## Memulai install aplikasi default tealinuxos 9
+## Memulai install aplikasi default tealinuxos 9 ##
 
 - install aplikasi default yang sudah ditetapkan dan dirundingkan oleh 
 
@@ -75,6 +75,8 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 - jika ada notif `[Y/n]` maka pilih `Y`
 
 - daftar aplikasi yang secara default terinstall 
+
+- pertama update dan upgrade dulu `apt update; apt upgrade`
 
 ```shell
 -> gnome-calculator
@@ -91,6 +93,22 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 -> python-pip
 -> git
 -> gedit
+-> xserver-xorg-video-intel
 ```
+
+#### Hati-hati dalam menambahkan aplikasi ####
+
 --------------------------------------------------
-## Memulai install aplikasi dari nambah repo
+## Memulai install aplikasi dari nambah ppa ##
+
+- pertama cari dulu ppa yang akan ditambahkan
+
+- cara menambahkan ppa `add-apt-repository ppa:darimana/nama-aplikasi`
+
+- sesudah itu update repo `apt update`
+
+- lalu install nama aplikasi yang tadi sudah ditambahkan `apt install namaaplikasi`
+
+- ada beberapa yang harus ditambahkan melalui ppa
+
+
