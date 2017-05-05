@@ -156,7 +156,7 @@ theme-switcher-tray       | `ppa:tea-projects/softwares`
 
 - kemudian disana ada link yang namanya `default.plymouth` dan `text.plymouth`
 
-- kemudian kedua file tadi menggunakan perintah `tmp/remaster-root/usr/share/plymouth/themes/default.plymouth` di terminal kamu
+- kemudian edit file-file tadi `tmp/remaster-root/usr/share/plymouth/themes/default.plymouth` di terminal kamu
 
 - maka hasilnya seperti ini
 
