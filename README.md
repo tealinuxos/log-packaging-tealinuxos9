@@ -142,3 +142,60 @@ tea-installer-gtk         | `ppa:tea-projects/softwares`
 tea-maker-gtk             | `ppa:tea-projects/softwares`
 
 theme-switcher-tray       | `ppa:tea-projects/softwares`
+
+#### Hati-hati dalam menambahkan aplikasi dari ppa ####
+
+--------------------------------------------------
+## Memulai mengganti plymouth ##
+
+- pastikan sudah punya satu gelondong file nya, bisa bikin sendiri ataupun cari di internet
+
+- dalam satu gelodong tadi terdapat `namaplymouth.plymouth` dan `namaplymouth.script`
+
+- jika sudah copy paste file gelondong tadi ke `/usr/share/plymouth/themes/` 
+
+- kemudian disana ada link yang namanya `default.plymouth` dan `text.plymouth`
+
+- kemudian kedua file tadi menggunakan perintah `sudo gedit /usr/share/plymouth/themes/default.plymouth` di terminal kamu
+
+- maka hasilnya seperti ini
+
+```shell
+[Plymouth Theme]
+Name=tealinuxos
+Description=tealinuxos plymouth 
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/tealinuxos
+ScriptFile=/usr/share/plymouth/themes/tealinuxos/tealinuxos.script
+```
+
+- aslinya default bawaan, maka diganti dengan tealinuxos
+
+- jika sudah save
+
+- kemudian edit satunya `sudo gedit /usr/share/plymouth/themes/text.plymouth`
+
+```shell
+[Plymouth Theme]
+Name=Xubuntu Text
+Description=Text mode theme based on xubuntu-logo theme
+ModuleName=ubuntu-text
+
+[ubuntu-text]
+title=TeaLinuxOS 8.0
+black=0x000000
+white=0xffffff
+brown=0x000000
+blue=0xffffff
+```
+
+- ganti settin default dengan setting tealinuxos
+
+- jika sudah save
+
+
+#### Hati-hati dalam mengganti plymouth default ####
+
+---------------------------
