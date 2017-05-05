@@ -307,6 +307,27 @@ blue=0xffffff
 
 - kemudian save
 
+- buatlah satu file dengan nama #####tealinux.xml##### di `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/` 
+
+- kemudian isi file tadi adalah
+
+```shell
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="tealinux" version="1.0">
+  <property name="switcher" type="empty">
+    <property name="DevTheme" type="string" value="Tea-Mint-Dark"/>
+    <property name="DevWindow" type="string" value="Tea-Mint-Dark"/>
+    <property name="DevIcon" type="string" value="Tea-Mint-Dark"/>
+    <property name="NormalTheme" type="string" value="Tea-Mint-Light"/>
+    <property name="NormalWindow" type="string" value="Tea-Mint-Light"/>
+    <property name="NormalIcon" type="string" value="Tea-Mint-Light"/>
+  </property>
+</channel>
+```
+
+- kemudian save
+
 #### Hati-hati dalam mengganti settingan ini ####
 
 ---------------------------
