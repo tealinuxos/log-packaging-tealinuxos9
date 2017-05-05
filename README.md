@@ -195,7 +195,10 @@ blue=0xffffff
 
 - jika sudah save
 
+- kemudian ketik perintah ini menggunakan terminal `update-initramfs -u`
+
 
 #### Hati-hati dalam mengganti plymouth default ####
 
 ---------------------------
+
