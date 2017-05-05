@@ -152,11 +152,11 @@ theme-switcher-tray       | `ppa:tea-projects/softwares`
 
 - dalam satu gelodong tadi terdapat `namaplymouth.plymouth` dan `namaplymouth.script`
 
-- jika sudah copy paste file gelondong tadi ke `/usr/share/plymouth/themes/` 
+- jika sudah copy paste file gelondong tadi ke `tmp/remaster-root/usr/share/plymouth/themes/` 
 
 - kemudian disana ada link yang namanya `default.plymouth` dan `text.plymouth`
 
-- kemudian kedua file tadi menggunakan perintah `sudo gedit /usr/share/plymouth/themes/default.plymouth` di terminal kamu
+- kemudian kedua file tadi menggunakan perintah `tmp/remaster-root/usr/share/plymouth/themes/default.plymouth` di terminal kamu
 
 - maka hasilnya seperti ini
 
@@ -175,7 +175,7 @@ ScriptFile=/usr/share/plymouth/themes/tealinuxos/tealinuxos.script
 
 - jika sudah save
 
-- kemudian edit satunya `sudo gedit /usr/share/plymouth/themes/text.plymouth`
+- kemudian edit satunya `tmp/remaster-root/usr/share/plymouth/themes/text.plymouth`
 
 ```shell
 [Plymouth Theme]
@@ -201,4 +201,48 @@ blue=0xffffff
 #### Hati-hati dalam mengganti plymouth default ####
 
 ---------------------------
+## Memulai mengganti tema default ##
 
+- siapkan tema yang akan dijadikan default
+
+- copy segelondong tema yang sudah ada ke `tmp/remaster-root/usr/share/themes/`
+
+- kemudian edit file yang ada di `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml` menggunakan text editor
+
+- kemudian edit file `xsettings.xml` yang berisi default diganti dengan nama tema yang akan dijadikan default
+
+```shell
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xsettings" version="1.0">
+  <property name="Net" type="empty">
+    <property name="ThemeName" type="string" value="Tea-Mint-Light"/>
+    <property name="IconThemeName" type="string" value="Tea-Mint-Light"/>
+  </property>
+  <property name="Xft" type="empty">
+    <property name="DPI" type="int" value="96"/>
+    <property name="Antialias" type="int" value="1"/>
+    <property name="Hinting" type="int" value="1"/>
+    <property name="HintStyle" type="string" value="hintslight"/>
+    <property name="RGBA" type="string" value="rgb"/>
+    <property name="Lcdfilter" type="string" value="lcddefault"/>
+  </property>
+  <property name="Gtk" type="empty">
+    <property name="CursorThemeName" type="string" value="Human"/>
+    <property name="CursorThemeSize" type="int" value="24"/>
+    <property name="DecorationLayout" type="string" value="menu:minimize,maximize,close"/>
+    <property name="FontName" type="string" value="Ubuntu 9"/>
+    <property name="IconSizes" type="string" value="gtk-button=16,16"/>
+  </property>
+</channel>
+```
+
+- lihat "Tea-Mint-Light" 
+
+- kita juga bisa memberikan tema kursor default, font default dan ukuran ikon
+
+- jika sudah save
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
