@@ -246,3 +246,67 @@ blue=0xffffff
 #### Hati-hati dalam mengganti settingan ini ####
 
 ---------------------------
+
+## Memulai mengganti wallpaper default ##
+
+- pertama pilih wallpaper yang akan dijadikan sebagai default
+
+- kemudian copy wallpaper tadi ke `tmp/remaster-root/usr/share/xfce4/backdrops/`
+
+- kemudian edit file `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml`
+
+- isi file 
+
+```shell
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-desktop" version="1.0">
+  <property name="desktop-icons" type="empty">
+    <property name="style" type="empty"/>
+    <property name="file-icons" type="empty">
+      <property name="show-home" type="bool" value="false"/>
+      <property name="show-filesystem" type="bool" value="false"/>
+      <property name="show-removable" type="bool" value="false"/>
+      <property name="show-trash" type="bool" value="false"/>
+    </property>
+    <property name="icon-size" type="empty"/>
+    <property name="tooltip-size" type="empty"/>
+  </property>
+  <property name="backdrop" type="empty">
+    <property name="screen0" type="empty">
+      <property name="monitor0" type="empty">
+        <property name="image-path" type="empty"/>
+        <property name="image-style" type="empty"/>
+        <property name="image-show" type="empty"/>
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/raptor_lick_the_past.png"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/raptor_lick_the_past.png"/>
+        </property>
+      </property>
+      <property name="monitor1" type="empty">
+        <property name="image-path" type="empty"/>
+        <property name="image-style" type="empty"/>
+        <property name="image-show" type="empty"/>
+      </property>
+    </property>
+  </property>
+  <property name="last" type="empty">
+    <property name="window-width" type="int" value="640"/>
+    <property name="window-height" type="int" value="539"/>
+  </property>
+</channel>
+```
+
+- ganti `raptor_lick_the_past.png` dengan wallpaper yang dipilih
+
+- kemudian save
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
