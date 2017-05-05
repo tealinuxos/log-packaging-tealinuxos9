@@ -135,4 +135,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 
 - ada beberapa yang harus ditambahkan melalui ppa
 
-
+firefox dev edition       | `ppa:ubuntu-mozilla-daily/firefox-aurora`
+tea-installer-gtk         | `ppa:tea-projects/softwares`
+tea-maker-gtk             | `ppa:tea-projects/softwares`
+theme-switcher-tray       | `ppa:tea-projects/softwares`
