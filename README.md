@@ -113,6 +113,8 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> python-pip
 -> git
 -> gedit
+-> unzip
+-> unrar
 -> xserver-xorg-video-intel
 ```
 
