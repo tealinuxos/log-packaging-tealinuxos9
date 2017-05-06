@@ -80,10 +80,6 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> xfburn
 -> firefox
 -> firefox-locale-en
--> gnome-calculator
--> gnome-software
--> gnome-software-common
--> gnome-system-tools
 -> xfce4-taskmanager
 ```
 
@@ -100,7 +96,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 
 - daftar aplikasi yang secara default terinstall 
 
-- pertama update dan upgrade dulu `apt update; apt upgrade`
+- pertama update dan upgrade dulu `apt update`
 
 ```shell
 -> gnome-calculator
