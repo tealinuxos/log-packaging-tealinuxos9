@@ -331,3 +331,47 @@ blue=0xffffff
 #### Hati-hati dalam mengganti settingan ini ####
 
 ---------------------------
+
+## Memulai menambah shortcut default ##
+
+- pertama siapkan nama aplikasi yang akan ditambah sebagai default
+
+- pikirkan tombol kombinasi apa yang akan dijadikan shirtcut key
+
+- kemudian edit file di `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml`
+
+- hasilnya seperti ini 
+
+```shell
+<property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="xflock4"/>
+      <property name="&lt;Super&gt;1" type="string" value="parole"/>
+      <property name="&lt;Super&gt;2" type="string" value="pidgin"/>
+      <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
+      <property name="&lt;Super&gt;3" type="string" value="libreoffice --writer"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
+      <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder"/>
+      <property name="&lt;Super&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
+      <property name="&lt;Super&gt;w" type="string" value="exo-open --launch WebBrowser"/>
+      <property name="&lt;Super&gt;4" type="string" value="libreoffice --calc"/>
+      <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
+      <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
+      <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
+      <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xkill"/>
+      <property name="XF86Messenger" type="string" value="pidgin"/>
+      <property name="XF86Calculator" type="string" value="gnome-calculator"/>
+      <property name="XF86Music" type="string" value="parole"/>
+      <property name="XF86HomePage" type="string" value="exo-open --launch WebBrowser"/>
+      <property name="override" type="bool" value="true"/>
+      <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
+      <property name="F12" type="string" value="xfce4-terminal --drop-down"/>
+      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
+```
+
+- dengan cara `<property name="namatombol" type="string" value="command/nama-aplikasi"/>`
+
+- kemudian save
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
