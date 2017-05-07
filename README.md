@@ -112,7 +112,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 #### Hati-hati dalam menghapus aplikasi ####
 
 ------------------------------------------------------------
-## Memulai install aplikasi default tealinuxos 9 ##
+## Memulai install aplikasi default ##
 
 - install aplikasi default yang sudah ditetapkan dan dirundingkan oleh 
 
@@ -221,8 +221,30 @@ blue=0xffffff
 
 - kemudian ketik perintah ini menggunakan terminal `update-initramfs -u`
 
+- atau menggunakan cara ini
+
+```shell
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/nama-tema/nama-tema.plymouth 200
+update-alternatives --config default.plymouth #pilih *1
+update-initramfs -u
+```
 
 #### Hati-hati dalam mengganti plymouth default ####
+
+- pada saat `update-initramfs -u` akan ada error 
+
+```shell
+update-initramfs: Generating /boot/initrd.img-4.8.0-040800-generic
+W: Possible missing firmware /lib/firmware/i915/kbl_dmc_ver1_01.bin for module i915
+W: Possible missing firmware /lib/firmware/i915/kbl_guc_ver9_14.bin for module i915
+W: Possible missing firmware /lib/firmware/i915/bxt_guc_ver8_7.bin for module i915
+```
+
+- download file-file tadi di https://01.org/linuxgraphics/downloads/firmware 
+
+- extract didalam folder `tmp/remaster-root/` 
+
+- kemudian install `./install.sh` satu persatu dari dalam folder
 
 ---------------------------
 ## Memulai mengganti tema default ##
