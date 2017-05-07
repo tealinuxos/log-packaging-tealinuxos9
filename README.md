@@ -305,7 +305,7 @@ blue=0xffffff
 
 - kemudian save
 
-- buatlah satu file dengan nama #####tealinux.xml##### di `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/` 
+- buatlah satu file dengan nama `tealinux.xml` di `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/` 
 
 - kemudian isi file tadi adalah
 
