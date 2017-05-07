@@ -35,7 +35,7 @@ $ sudo uck-remaster-pack-iso -d "tealinuxos" tealinux-test-brpbit.iso
 
 - jika 32bit -> `i386` atau 64bit -> `amd64`
 
-- jika sudah maka file `tealinux-test-i386.iso` ada di `tmp/remaster-new-files`
+- jika sudah maka file `tealinux-test-brpbit.iso` ada di `tmp/remaster-new-files`
 
 -------------------------------------------
  
