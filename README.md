@@ -13,7 +13,7 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 
 ------------------------------------
 
-## Panduan unpack iso pertama kali ##
+## Panduan pack iso pertama kali ##
 
 - lakukan `apt -f install` terlebih dahulu saat masih di `chroot`
 
