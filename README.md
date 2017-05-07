@@ -30,8 +30,10 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 ```shell
 # exit
 $ sudo uck-remaster-pack-rootfs
-$ sudo uck-remaster-pack-iso -d "tealinuxos" tealinux-test-i386.iso
+$ sudo uck-remaster-pack-iso -d "tealinuxos" tealinux-test-brpbit.iso
 ```
+
+- jika 32bit -> `i386` atau 64bit -> `amd64`
 
 - jika sudah maka file `tealinux-test-i386.iso` ada di `tmp/remaster-new-files`
 
