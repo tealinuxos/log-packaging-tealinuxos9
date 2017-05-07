@@ -12,6 +12,31 @@ $ sudo uck-remaster-chroot-rootfs
 Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-rootfs`
 
 ------------------------------------
+
+## Panduan unpack iso pertama kali ##
+
+- lakukan `apt -f install` terlebih dahulu saat masih di `chroot`
+
+- kemudian ini `ls /lib/modules/`
+
+- maka akan terlihat `4.8.0-36-generic` 
+
+- jika sudah buat `initrd.lz` dengan cara `mkinitramfs 4.8.0-36-generic -o /tmp/initrd.lz`
+
+- kemudian copy file `initrd.lz` dari `tmp/remaster-root/tmp/` ke `tmp/remaster-iso/casper/` kemudian replace
+
+- jika sudah pack
+
+```shell
+# exit
+$ sudo uck-remaster-pack-rootfs
+$ sudo uck-remaster-pack-iso -d "tealinuxos" tealinux-test-i386.iso
+```
+
+- jika sudah maka file `tealinux-test-i386.iso` ada di `tmp/remaster-new-files`
+
+-------------------------------------------
+ 
 ## Memulai menghapus ##
 
 - pertama lihat daftar aplikasi yang terdaftar dengan nama aplikasi namaaplikasi
