@@ -6,7 +6,6 @@ Log packaging tealinuxos 9
 ```shell
 $ sudo uck-remaster-unpack-iso namafile.iso
 $ sudo uck-remaster-unpack-rootfs
-$ sudo uck-remaster-unpack-initrd
 $ sudo uck-remaster-chroot-rootfs
 ```
 
@@ -369,6 +368,35 @@ blue=0xffffff
 - dengan cara `<property name="namatombol" type="string" value="command/nama-aplikasi"/>`
 
 - kemudian save
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
+
+## Memulai mengganti username dan hostname (live session) ##
+
+- pertama buka `tmp/remaster-root/etc/casper.conf`
+
+- edit file yang isinya ini
+
+```shell
+# This file should go in /etc/casper.conf
+# Supported variables are:
+# USERNAME, USERFULLNAME, HOST, BUILD_SYSTEM, FLAVOUR
+
+export USERNAME="tealinuxos"
+export USERFULLNAME="Live session user"
+export HOST="tealinuxos"
+export BUILD_SYSTEM="Ubuntu"
+
+# USERNAME and HOSTNAME as specified above won't be honoured and will be set to
+# flavour string acquired at boot time, unless you set FLAVOUR to any
+# non-empty string.
+
+# export FLAVOUR="Ubuntu"
+```
+
+- jika sudah save
 
 #### Hati-hati dalam mengganti settingan ini ####
 
