@@ -104,7 +104,6 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> mousepad
 -> xfce4-notes
 -> xfce4-notes-plugin
--> xfce4-screenshooter
 -> xfburn
 -> firefox
 -> firefox-locale-en
@@ -144,6 +143,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> unzip
 -> unrar
 -> xserver-xorg-video-intel
+-> npm
 ```
 
 #### Hati-hati dalam menambahkan aplikasi ####
@@ -364,12 +364,12 @@ W: Possible missing firmware /lib/firmware/i915/bxt_guc_ver8_7.bin for module i9
 
 <channel name="tealinux" version="1.0">
   <property name="switcher" type="empty">
-    <property name="DevTheme" type="string" value="Tea-Mint-Dark"/>
-    <property name="DevWindow" type="string" value="Tea-Mint-Dark"/>
-    <property name="DevIcon" type="string" value="Tea-Mint-Dark"/>
-    <property name="NormalTheme" type="string" value="Tea-Mint-Light"/>
-    <property name="NormalWindow" type="string" value="Tea-Mint-Light"/>
-    <property name="NormalIcon" type="string" value="Tea-Mint-Light"/>
+    <property name="DevTheme" type="string" value="Working-Theme-Dark"/>
+    <property name="DevWindow" type="string" value="Working-Theme-Dark"/>
+    <property name="DevIcon" type="string" value="Paper2"/>
+    <property name="NormalTheme" type="string" value="Working-Theme-Greet"/>
+    <property name="NormalWindow" type="string" value="Working-Theme-Greet"/>
+    <property name="NormalIcon" type="string" value="Paper"/>
   </property>
 </channel>
 ```
@@ -452,3 +452,91 @@ export BUILD_SYSTEM="Ubuntu"
 #### Hati-hati dalam mengganti settingan ini ####
 
 ---------------------------
+
+## Memulai agar os menjadi tealinux ##
+
+- ganti yang tulisan xubuntu menjadi TeaLinuxOS 9.0
+
+- ada di `tmp/remaster-iso/.disk/info`
+
+- `tmp/remaster-iso/isolinux/txt.cfg`
+
+- `tmp/remaster-iso/boot/grub/grub.cfg`
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
+
+## Memulai mengganti whisker ##
+
+- siapkan file
+
+- kemudian taruh di `tmp/remaster-root/usr/share/pixmaps/` dengan ekstensi `.png`
+
+- kemudian edit file `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/whiskermenu/default.rc`
+
+- edit file agar icon whisker menggunakan icon kita
+
+- jika sudah save 
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
+
+
+## Memulai menambah panel ##
+
+- buka `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/panel/default.xml`
+
+- dan tambah ini setelah `plugin-8`
+
+```shell
+    <property name="plugin-9" type="string" value="pager"/>
+    <property name="plugin-10" type="string" value="actions">
+      <property name="ask-confirmation" type="bool" value="true"/>
+      <property name="appearance" type="uint" value="0"/>
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+    </property>
+```
+
+#### Hati - hati dalam mengganti setting ####
+
+------------------------------------------------
+
+## Memulai mengganti background saat install ##
+
+- siapkan backgroundnya dulu
+
+- lalu edit `tmp/remaster-root/usr/bin/ubiquity-dm`
+
+- edit bagian ini 
+
+```shell
+background_image = None
+            for background in (
+                    '/usr/share/xfce4/backdrops/bg-wp-web-ver.png',
+                    '/usr/share/backgrounds/'
+                    'ubuntustudio/ubuntustudio-default.png',
+                    '/usr/share/lubuntu/wallpapers/'
+                    'lubuntu-default-wallpaper.png'):
+                exists = os.access(background, os.R_OK)
+                if exists:
+                    background_image = background
+                    break
+
+            accessibility = False
+```
+
+- pastikan sesuai dengan nama background
