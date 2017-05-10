@@ -104,7 +104,6 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> mousepad
 -> xfce4-notes
 -> xfce4-notes-plugin
--> xfce4-screenshooter
 -> xfburn
 -> firefox
 -> firefox-locale-en
