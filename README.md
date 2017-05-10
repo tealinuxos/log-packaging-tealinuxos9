@@ -28,6 +28,8 @@ Jika sudah pernah melakukan unpack maka hanya perlu `sudo uck-remaster-chroot-ro
 - jika sudah pack
 
 ```shell
+# rm -rf /var/lib/apt/lists/*
+# rm -rf /var/cache/apt/*
 # exit
 $ sudo uck-remaster-pack-rootfs
 $ sudo uck-remaster-pack-iso -d "tealinuxos" tealinux-test-brpbit.iso
