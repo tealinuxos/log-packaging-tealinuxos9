@@ -364,12 +364,12 @@ W: Possible missing firmware /lib/firmware/i915/bxt_guc_ver8_7.bin for module i9
 
 <channel name="tealinux" version="1.0">
   <property name="switcher" type="empty">
-    <property name="DevTheme" type="string" value="Tea-Mint-Dark"/>
-    <property name="DevWindow" type="string" value="Tea-Mint-Dark"/>
-    <property name="DevIcon" type="string" value="Tea-Mint-Dark"/>
-    <property name="NormalTheme" type="string" value="Tea-Mint-Light"/>
-    <property name="NormalWindow" type="string" value="Tea-Mint-Light"/>
-    <property name="NormalIcon" type="string" value="Tea-Mint-Light"/>
+    <property name="DevTheme" type="string" value="Working-Theme-Dark"/>
+    <property name="DevWindow" type="string" value="Working-Theme-Dark"/>
+    <property name="DevIcon" type="string" value="Paper2"/>
+    <property name="NormalTheme" type="string" value="Working-Theme-Greet"/>
+    <property name="NormalWindow" type="string" value="Working-Theme-Greet"/>
+    <property name="NormalIcon" type="string" value="Paper"/>
   </property>
 </channel>
 ```
