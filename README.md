@@ -144,6 +144,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> unzip
 -> unrar
 -> xserver-xorg-video-intel
+-> npm
 ```
 
 #### Hati-hati dalam menambahkan aplikasi ####
@@ -490,3 +491,31 @@ GRUB_BACKGROUND="/usr/share/xfce4/backdrops/Wallpaper.png"
 #### Hati-hati dalam mengganti settingan ini ####
 
 ---------------------------
+
+
+## Memulai menambah panel ##
+
+- buka `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/panel/default.xml`
+
+- dan tambah ini setelah `plugin-8`
+
+```shell
+    <property name="plugin-9" type="string" value="pager"/>
+    <property name="plugin-10" type="string" value="actions">
+      <property name="ask-confirmation" type="bool" value="true"/>
+      <property name="appearance" type="uint" value="0"/>
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+    </property>
+```
