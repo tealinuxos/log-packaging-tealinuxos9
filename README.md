@@ -454,23 +454,15 @@ export BUILD_SYSTEM="Ubuntu"
 
 ---------------------------
 
-## Memulai mengganti background GRUB ##
+## Memulai agar os menjadi tealinux ##
 
-- pertama buka `tmp/remaster-root/etc/default/grub`
+- ganti yang tulisan xubuntu menjadi TeaLinuxOS 9.0
 
-- dan menambahkan `GRUB_BACKGROUND="/usr/share/xfce4/backdrops/Wallpaper.png"`
+- ada di `tmp/remaster-iso/.disk/info`
 
-- seperti ini
-```shell
-GRUB_DEFAULT=0
-GRUB_HIDDEN_TIMEOUT=0
-GRUB_HIDDEN_TIMEOUT_QUIET=true
-GRUB_TIMEOUT=10
-GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-GRUB_CMDLINE_LINUX=""
-GRUB_BACKGROUND="/usr/share/xfce4/backdrops/Wallpaper.png"
-```
+- `tmp/remaster-iso/isolinux/txt.cfg`
+
+- `tmp/remaster-iso/boot/grub/grub.cfg`
 
 #### Hati-hati dalam mengganti settingan ini ####
 
