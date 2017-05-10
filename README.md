@@ -474,3 +474,19 @@ GRUB_BACKGROUND="/usr/share/xfce4/backdrops/Wallpaper.png"
 #### Hati-hati dalam mengganti settingan ini ####
 
 ---------------------------
+
+## Memulai mengganti whisker ##
+
+- siapkan file
+
+- kemudian taruh di `tmp/remaster-root/usr/share/pixmaps/` dengan ekstensi `.png`
+
+- kemudian edit file `tmp/remaster-root/etc/xdg/xdg-xubuntu/xfce4/whiskermenu/default.rc`
+
+- edit file agar icon whisker menggunakan icon kita
+
+- jika sudah save 
+
+#### Hati-hati dalam mengganti settingan ini ####
+
+---------------------------
