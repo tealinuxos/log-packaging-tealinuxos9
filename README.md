@@ -510,3 +510,33 @@ export BUILD_SYSTEM="Ubuntu"
       </property>
     </property>
 ```
+
+#### Hati - hati dalam mengganti setting ####
+
+------------------------------------------------
+
+## Memulai mengganti background saat install ##
+
+- siapkan backgroundnya dulu
+
+- lalu edit `tmp/remaster-root/usr/bin/ubiquity-dm`
+
+- edit bagian ini 
+
+```shell
+background_image = None
+            for background in (
+                    '/usr/share/xfce4/backdrops/bg-wp-web-ver.png',
+                    '/usr/share/backgrounds/'
+                    'ubuntustudio/ubuntustudio-default.png',
+                    '/usr/share/lubuntu/wallpapers/'
+                    'lubuntu-default-wallpaper.png'):
+                exists = os.access(background, os.R_OK)
+                if exists:
+                    background_image = background
+                    break
+
+            accessibility = False
+```
+
+- pastikan sesuai dengan nama background
