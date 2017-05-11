@@ -107,6 +107,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> xfburn
 -> firefox
 -> firefox-locale-en
+-> thunar
 -> xfce4-taskmanager
 ```
 
