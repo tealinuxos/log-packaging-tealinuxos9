@@ -567,3 +567,15 @@ theme = Working-Theme-Greet
 - copy and replace `tmp/remaster-root/usr/share/ubiquity/pixmaps/ubuntu_installed.png`
 
 - kemudian selesai
+
+## Mulai bingung ##
+
+- edit file `tmp/remaster-root/usr/share/applications/exo-file-manager.desktop`
+
+- pastikan sama
+
+```shell
+Exec=nautilus
+Icon=system-file-manager
+StartupNotify=true
+```
