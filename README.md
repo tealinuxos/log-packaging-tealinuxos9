@@ -579,3 +579,20 @@ Exec=nautilus
 Icon=system-file-manager
 StartupNotify=true
 ```
+
+## Memeulai mengganti background grub ##
+
+- siapkan gambar
+
+- dan kemudian edit file `tmp/remaster-root/etc/grub.d/05_debian_theme`
+
+- kemudian edit dibagian
+
+```shell
+if set_background_image "/usr/share/xfce4/backdrops/bg-wp-web-ver.png"; then
+			exit 0
+		fi
+		;;
+```
+
+- edit yang paling bawah
