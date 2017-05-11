@@ -559,4 +559,10 @@ position = 35%,end 50%,center
 theme = Working-Theme-Greet
 ```
 
+## Memulai mengganti logo tealinuxos saat ubiquity ##
 
+- sudah ada logonya
+
+- copy and replace `tmp/remaster-root/usr/share/ubiquity/pixmaps/ubuntu_installed.png`
+
+- kemudian selesai
