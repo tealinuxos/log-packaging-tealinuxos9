@@ -107,7 +107,6 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> xfburn
 -> firefox
 -> firefox-locale-en
--> thunar
 -> xfce4-taskmanager
 ```
 
@@ -143,6 +142,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> gedit
 -> unzip
 -> unrar
+-> libreoffice
 -> xserver-xorg-video-intel
 -> npm
 ```
@@ -415,6 +415,7 @@ W: Possible missing firmware /lib/firmware/i915/bxt_guc_ver8_7.bin for module i9
       <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="F12" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
+      <property name="&lt;Super&gt;" type="string" value="xfce4-popup-whiskermenu"/>
 ```
 
 - dengan cara `<property name="namatombol" type="string" value="command/nama-aplikasi"/>`
@@ -579,3 +580,68 @@ Exec=nautilus
 Icon=system-file-manager
 StartupNotify=true
 ```
+
+## Memeulai mengganti background grub ##
+
+- siapkan gambar
+
+- dan kemudian edit file `tmp/remaster-root/etc/grub.d/05_debian_theme`
+
+- kemudian edit dibagian
+
+```shell
+if set_background_image "/usr/share/xfce4/backdrops/bg-wp-web-ver.png"; then
+			exit 0
+		fi
+		;;
+```
+
+- edit yang paling bawah
+
+
+## Memulai setting mime ##
+
+- buka di `tmp/remaster-root/usr/share/applications/mimeinfo.cache`
+
+- cari `inode/directory=` ganti menjadi `nautilus.desktop`
+
+- kemudian save
+
+## Memulai menambah bingung ##
+
+- buka `tmp/remaster-root/usr/share/python-apt/templates/`
+
+- kemudian copy file `Ubuntu.info` menjadi `TeaLinuxOS.info`
+
+- kemudian copy file `Ubuntu.mirrors` menjadi `TeaLinuxOS.mirrors`
+
+- edit beberapa line di `TeaLinuxOS.info`
+
+```shell 
+RepositoryType: deb
+BaseURI: http://studio.tealinuxos.org/ubuntu/
+MatchURI: studio.tealinuxos.org/ubuntu/
+BaseURI-amd64: http://studio.tealinuxos.org/module/debs/
+MatchURI-amd64: studio.tealinuxos.org/module/debs/
+BaseURI-i386: http://studio.tealinuxos.org/module/debs/
+MatchURI-i386: studio.tealinuxos.org/module/debs/
+MirrorsFile-amd64: TeaLinuxOS.mirrors
+MirrorsFile-i386: TeaLinuxOS.mirrors
+Description: TeaLinuxOS for developing environtment
+```
+
+- kemudian edit file `TeaLinuxOS.mirrors`
+
+- tambahkan
+
+```shell
+#LOC:ID
+http://studio.tealinuxos.org/ubuntu/
+```
+## Memulai nambah repo ##
+
+- buka `tmp/remaster-root/etc/apt/sources.list`
+
+- kemudian tambah `deb http://studio.tealinuxos.org/module/debs i386/`
+
+- kemudian save
