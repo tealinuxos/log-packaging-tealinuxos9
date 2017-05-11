@@ -638,10 +638,4 @@ Description: TeaLinuxOS for developing environtment
 #LOC:ID
 http://studio.tealinuxos.org/ubuntu/
 ```
-## Memulai nambah repo ##
 
-- buka `tmp/remaster-root/etc/apt/sources.list`
-
-- kemudian tambah `deb http://studio.tealinuxos.org/module/debs i386/`
-
-- kemudian save
