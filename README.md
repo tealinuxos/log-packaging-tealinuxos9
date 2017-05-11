@@ -416,6 +416,7 @@ W: Possible missing firmware /lib/firmware/i915/bxt_guc_ver8_7.bin for module i9
       <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="F12" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
+      <property name="&lt;Super&gt;" type="string" value="xfce4-popup-whiskermenu"/>
 ```
 
 - dengan cara `<property name="namatombol" type="string" value="command/nama-aplikasi"/>`
