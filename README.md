@@ -107,6 +107,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> xfburn
 -> firefox
 -> firefox-locale-en
+-> thunar
 -> xfce4-taskmanager
 ```
 
@@ -540,3 +541,29 @@ background_image = None
 ```
 
 - pastikan sesuai dengan nama background
+
+## Memulai mengganti theme lightdm greeter ##
+
+- siapkan tema, icon, font
+
+- buka `tmp/remaster-root/etc/lightdm/lightdm-gtk-greeter.conf`
+
+- kemudian isi dengan
+
+```shell 
+[greeter]
+background = /usr/share/xfce4/backdrops/bg-wp-web-ver.png
+theme-name = Working-Theme-Greet
+icon-theme-name = Paper
+font-name = URW Gothic L Demi 11
+position = 35%,end 50%,center
+theme = Working-Theme-Greet
+```
+
+## Memulai mengganti logo tealinuxos saat ubiquity ##
+
+- sudah ada logonya
+
+- copy and replace `tmp/remaster-root/usr/share/ubiquity/pixmaps/ubuntu_installed.png`
+
+- kemudian selesai
