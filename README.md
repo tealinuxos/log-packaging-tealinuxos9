@@ -107,7 +107,6 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> xfburn
 -> firefox
 -> firefox-locale-en
--> thunar
 -> xfce4-taskmanager
 ```
 
@@ -604,6 +603,38 @@ if set_background_image "/usr/share/xfce4/backdrops/bg-wp-web-ver.png"; then
 
 - buka di `tmp/remaster-root/usr/share/applications/mimeinfo.cache`
 
-- cari `inode/directory=` ganti menjadi nautilus.desktop`
+- cari `inode/directory=` ganti menjadi `nautilus.desktop`
 
 - kemudian save
+
+## Memulai menambah bingung ##
+
+- buka `tmp/remaster-root/usr/share/python-apt/templates/`
+
+- kemudian copy file `Ubuntu.info` menjadi `TeaLinuxOS.info`
+
+- kemudian copy file `Ubuntu.mirrors` menjadi `TeaLinuxOS.mirrors`
+
+- edit beberapa line di `TeaLinuxOS.info`
+
+```shell 
+RepositoryType: deb
+BaseURI: http://studio.tealinuxos.org/ubuntu/
+MatchURI: studio.tealinuxos.org/ubuntu/
+BaseURI-amd64: http://studio.tealinuxos.org/module/debs/
+MatchURI-amd64: studio.tealinuxos.org/module/debs/
+BaseURI-i386: http://studio.tealinuxos.org/module/debs/
+MatchURI-i386: studio.tealinuxos.org/module/debs/
+MirrorsFile-amd64: TeaLinuxOS.mirrors
+MirrorsFile-i386: TeaLinuxOS.mirrors
+Description: TeaLinuxOS for developing environtment
+```
+
+- kemudian edit file `TeaLinuxOS.mirrors`
+
+- tambahkan
+
+```shell
+#LOC:ID
+http://studio.tealinuxos.org/ubuntu/
+```
