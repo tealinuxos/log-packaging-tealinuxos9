@@ -143,6 +143,7 @@ ii  libreoffice-writer                    1:5.1.2-0ubuntu1                      
 -> gedit
 -> unzip
 -> unrar
+-> libreoffice
 -> xserver-xorg-video-intel
 -> npm
 ```
