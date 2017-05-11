@@ -597,3 +597,12 @@ if set_background_image "/usr/share/xfce4/backdrops/bg-wp-web-ver.png"; then
 ```
 
 - edit yang paling bawah
+
+
+## Memulai setting mime ##
+
+- buka di `tmp/remaster-root/usr/share/applications/mimeinfo.cache`
+
+- cari `inode/directory=` ganti menjadi nautilus.desktop`
+
+- kemudian save
