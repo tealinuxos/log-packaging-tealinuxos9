@@ -639,3 +639,52 @@ Description: TeaLinuxOS for developing environtment
 http://studio.tealinuxos.org/ubuntu/
 ```
 
+## Memulai install modularitea ##
+
+- pertama install dulu npm
+
+- caranya install bisa lihat di https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+
+- atau langsung saja
+
+```
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+apt-get install -y nodejs
+```
+
+- kemudian masuk di folder `tmp/remaster-root/usr/share/`
+
+```
+git clone https://github.com/tealinuxos/modularitea.git
+chmod 777 -R modularitea/
+cd modularitea/gui-electron/
+npm i
+cd ..
+```
+
+- jika sudah bikin file `runmodularitea` dan isinya
+
+```
+#!/bin/sh
+
+cd /usr/share/modularitea/gui-electron/
+npm run dev
+```
+
+- jika sudah bikin shortcut `tmp/remaster-root/usr/share/applications/modularitea.desktop`
+
+- dengan isinya
+
+```
+[Desktop Entry]
+Name=Modularitea
+GenericName=Modularitea
+Comment=Modularitea merupakan aplikasi yang dapat memasang lingkungan kerja untuk para pengembang hanya dengan beberapa langkah sederhana. Modularitea menyederhanakan proses cari, unduh, pasang dan ubahsuai ke dalam bentuk modul.
+Exec=/usr/share/modularitea/runmodularitea
+Icon=/usr/share/icons/modularitea.png
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Core;Development;Utility;XFCE;Settings;X-XFCE-SettingsDialog;
+```
+
+- jika sudah save
